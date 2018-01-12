@@ -1,4 +1,5 @@
 #!/bin/sh
+#!/usr/bin/env sh
 
 # Set up Rails app. Run this script immediately after cloning the codebase.
 # https://github.com/thoughtbot/guides/tree/master/protocol
@@ -6,20 +7,36 @@
 # Exit if any subcommand fails
 set -e
 
+join_heroku_app() {
+  if ! command -v heroku > /dev/null; then
+    printf 'Heroku Toolbelt is not installed.\n'
+    printf 'See https://toolbelt.heroku.com for install instructions.\n'
+    exit 1
+  fi
+
+  app="bostonrb-${1}"
+
+  heroku join --app "$app" || true
+  heroku git:remote --app "$app" --remote "$1" --ssh-git
+}
+
 # Set up Ruby dependencies via Bundler
 gem install bundler --conservative
 bundle check || bundle install
 
-# Set up database and add any development seed data
-bin/rails dev:prime
-
-if [ ! -d .git/safe ] && echo $PATH | grep .git/safe > /dev/null; then
-  echo "-----------------------------------------------------------------------"
-  echo
-  echo "-> When you trust this repo, remember to run: mkdir -p .git/safe"
-  echo
+# Set up configurable environment variables
+if [ ! -f .env ]; then
+  cp .sample.env .env
 fi
 
-# Only if this isn't CI
-# if [ -z "$CI" ]; then
-# fi
+# Set up database and add any development seed data
+bundle exec rake db:migrate
+bundle exec rake dev:prime
+
+# Add binstubs to PATH via export PATH=".git/safe/../../bin:$PATH" in ~/.zshenv
+mkdir -p .git/safe
+
+if [ -z "$CI" ]; then
+  # Set up Heroku access
+  join_heroku_app staging
+fi

@@ -9,7 +9,7 @@ require "action_view/railtie"
 require "action_cable/engine"
 require "sprockets/railtie"
 Bundler.require(*Rails.groups)
-module BostonrbWebsite
+module Bostonrb
   class Application < Rails::Application
     config.assets.quiet = true
     config.generators do |generate|

@@ -10,7 +10,7 @@ ruby "2.4.1"
 gem "autoprefixer-rails"
 gem "flutie"
 gem "jquery-rails"
-gem "pg"
+gem "pg", "~> 0.18"
 gem "puma"
 gem "rack-canonical-host"
 gem "rails", "~> 5.1.3"
@@ -19,7 +19,6 @@ gem "simple_form"
 gem "sprockets", ">= 3.0.0"
 gem "title"
 gem "uglifier"
-
 
 group :development do
   gem "listen"

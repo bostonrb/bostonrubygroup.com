@@ -1,6 +1,6 @@
 development: &default
   adapter: postgresql
-  database: bostonrb-website_development
+  database: bostonrb_development
   encoding: utf8
   min_messages: warning
   pool: <%= Integer(ENV.fetch("DB_POOL", 5)) %>
@@ -9,7 +9,7 @@ development: &default
 
 test:
   <<: *default
-  database: bostonrb-website_test
+  database: bostonrb_test
 
 production: &deploy
   encoding: utf8
