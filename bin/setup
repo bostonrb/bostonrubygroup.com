@@ -24,11 +24,6 @@ join_heroku_app() {
 gem install bundler --conservative
 bundle check || bundle install
 
-# Set up configurable environment variables
-if [ ! -f .env ]; then
-  cp .sample.env .env
-fi
-
 # Set up database and add any development seed data
 bundle exec rake db:migrate
 bundle exec rake dev:prime
