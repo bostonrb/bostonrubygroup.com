@@ -20,6 +20,11 @@ join_heroku_app() {
   heroku git:remote --app "$app" --remote "$1" --ssh-git
 }
 
+# Set up required configurable environment variables for development and test
+if [ ! -f .env ]; then
+  cp .env.sample .env
+fi
+
 # Set up Ruby dependencies via Bundler
 gem install bundler --conservative
 bundle check || bundle install
