@@ -8,6 +8,7 @@ end
 ruby "2.4.1"
 
 gem "autoprefixer-rails"
+gem "bitters"
 gem "flutie"
 gem "jquery-rails"
 gem "pg", "~> 0.18"
