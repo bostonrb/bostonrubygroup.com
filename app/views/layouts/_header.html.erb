@@ -1,0 +1,42 @@
+<header class="site-header">
+  <nav class="site-nav">
+    <div class="site-nav__action">
+      <%= link_to root_path do %>
+        <%= image_tag("bostonrb-logo.png") %>
+        <h2 class="site-nav-title">Boston Ruby Group</h2>
+      <% end %>
+    </div>
+
+    <div class="site-nav__menu">
+      <ul>
+        <li>
+          <%= link_to("Presentations","#") %>
+        </li>
+
+        <li>
+          <%= link_to("Submit Proposal", "#") %>
+        </li>
+
+        <li>
+          <%= link_to("Resources", "#") %>
+        </li>
+
+        <li>
+          <%= link_to(
+            "#",
+            class: "site-nav__cta",
+          ) do %>
+            <span class="site-nav__cta-title">Follow</span>
+
+            <%= image_tag(
+              "twitter-logo.png",
+              class: "site-nav__cta-logo",
+              alt: "Follow us on Twitter"
+            ) %>
+
+          <% end %>
+        </li>
+      </ul>
+    </div>
+  </nav>
+</header>

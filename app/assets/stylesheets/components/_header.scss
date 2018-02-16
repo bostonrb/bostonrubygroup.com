@@ -1,0 +1,67 @@
+.site-header {
+  min-height: 4rem;
+}
+
+.site-nav {
+  align-items: center;
+  display: flex;
+  justify-content: space-between;
+  margin: 0 auto;
+  max-width: 90%;
+  padding-top: 10px;
+
+  img {
+    vertical-align: middle;
+  }
+}
+
+.site-nav__action {
+  a:hover {
+    text-decoration: none;
+  }
+}
+
+.site-nav-title {
+  color: $red;
+  display: inline-block;
+  font-family: $heading-font-family;
+  font-size: 20px;
+  font-weight: 500;
+  padding-left: 20px;
+  margin: 0;
+  vertical-align: middle;
+}
+
+.site-nav__menu {
+  ul {
+    align-items: center;
+    display: flex;
+  }
+
+  li {
+    display: inline-block;
+    padding-left: 4em;
+  }
+}
+
+.site-nav__cta {
+  color: $twitter-blue;
+  padding: 14px 18px;
+  border: 1px solid $twitter-blue;
+  border-radius: 4px;
+
+  &:hover {
+    color: $twitter-blue;
+    text-decoration: none;
+  }
+}
+
+.site-nav__cta-title {
+  margin-right: 4px;
+}
+
+.site-nav__cta-logo {
+  height: 40px;
+  vertical-align: middle;
+  width: 40px;
+}

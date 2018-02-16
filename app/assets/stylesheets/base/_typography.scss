@@ -22,17 +22,18 @@ p {
 }
 
 a {
-  color: $action-color;
+  color: $red;
+  text-decoration: none;
   text-decoration-skip: ink;
   transition: color $base-duration $base-timing;
 
   &:hover {
-    color: shade($action-color, 25%);
+    color: $red;
+    text-decoration: underline;
   }
 
   &:focus {
-    outline: $focus-outline;
-    outline-offset: $focus-outline-offset;
+    outline: none;
   }
 }
 

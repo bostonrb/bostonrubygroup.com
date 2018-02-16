@@ -1,0 +1,49 @@
+.events-container {
+  display: flex;
+  padding-top: 6rem;
+  padding-bottom: 5rem;
+  min-height: 600px;
+}
+
+.upcoming-event-content {
+  display: flex;
+  flex: 0 1 55%;
+  justify-content: center;
+}
+
+.upcoming-event-details {
+  min-width: 50%;
+}
+
+.upcoming-event-title {
+  color: $red;
+  font-family: $heading-font-family;
+  font-weight: 500;
+  font-size: 24px;
+  margin-top: 1.5rem;
+}
+
+.upcoming-event-date {
+  padding-bottom: 2rem;
+}
+
+.upcoming-event__buttons {
+  margin-top: 3.5rem;
+
+   a:first-child {
+     margin-right: 0.5rem;
+   }
+}
+
+.upcoming-event__button {
+  border: 1px solid $light-gray;
+  border-radius: 4px;
+  color: $red;
+  padding: 0.5rem 3rem;
+  position: relative;
+  text-decoration: none;
+}
+
+.events-types {
+  flex: 0 1 45%;
+}
