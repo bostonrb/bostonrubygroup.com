@@ -10,20 +10,20 @@
         </p>
         <div class="upcoming-event-date">
           <span>
-            February 3, 2018</br>
-            6:45PM to 10:00PM
+            <%= meetup_event.date %></br>
+            <%= meetup_event.start_time %>
           </span>
         </div>
         <div class="upcoming-event-location">
           <span>
-            ezCater</br>
-            101 Arch St, 15th Floor</br>
-            Boston, MA
+            <%= meetup_event.venue %></br>
+            <%= meetup_event.address %></br>
+            <%= meetup_event.city_state %>
           </span>
         </div>
         <div class="upcoming-event__buttons">
-          <%= link_to("RSVP", "#", class: "upcoming-event__button") %>
-          <%= link_to("See all events", "#", class: "upcoming-event__button") %>
+          <%= link_to("RSVP", meetup_event.link, target: :blank, class: "upcoming-event__button") %>
+          <%= link_to("See all events", "https://meetup.com/bostonrb", class: "upcoming-event__button") %>
         </div>
       </div>
     </div>

@@ -20,6 +20,7 @@ gem "simple_form"
 gem "sprockets", ">= 3.0.0"
 gem "title"
 gem "uglifier"
+gem "httparty"
 
 group :development do
   gem "listen"
