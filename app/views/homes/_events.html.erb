@@ -23,7 +23,12 @@
         </div>
         <div class="upcoming-event__buttons">
           <%= link_to("RSVP", "#", class: "upcoming-event__button") %>
-          <%= link_to("See all events", "#", class: "upcoming-event__button") %>
+          <%= link_to(
+            "See all events",
+            "https://www.meetup.com/bostonrb/events/",
+            class: "upcoming-event__button",
+            target: "_blank"
+          ) %>
         </div>
       </div>
     </div>
