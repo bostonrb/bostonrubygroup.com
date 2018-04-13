@@ -16,7 +16,6 @@ gem "puma"
 gem "rack-canonical-host"
 gem "rails", "~> 5.1.3"
 gem "sass-rails", "~> 5.0"
-gem "simple_form"
 gem "sprockets", ">= 3.0.0"
 gem "title"
 gem "uglifier"
@@ -24,8 +23,6 @@ gem "uglifier"
 group :development do
   gem "listen"
   gem "rack-mini-profiler", require: false
-  gem "spring"
-  gem "spring-commands-rspec"
   gem "web-console"
 end
 
@@ -42,8 +39,6 @@ group :test do
   gem "database_cleaner"
   gem "formulaic"
   gem "launchy"
-  gem "shoulda-matchers"
-  gem "simplecov", require: false
   gem "webmock"
 end
 
