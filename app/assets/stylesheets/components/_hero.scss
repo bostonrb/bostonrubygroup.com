@@ -1,13 +1,20 @@
 .hero {
   align-items: center;
-  background: image-url("hero.png");
+  background-image: image-url("hero.png");
+  background-position: 63% 50%;
+  background-repeat: no-repeat;
   background-size: cover;
   border: solid 1px $gray;
   display: flex;
   flex-direction: column;
   justify-content: center;
   margin-top: 1em;
-  min-height: 650px;
+  min-height: 75vh;
+  padding: 0 1rem;
+
+  @include breakpoint("small") {
+    min-height: 50vh;
+  }
 }
 
 .hero__tagline {
@@ -16,8 +23,7 @@
   font-size: 36px;
   font-weight: 500;
   position: relative;
-  margin-top: 6rem;
-  margin-bottom: 3rem;
+  text-align: center;
 }
 
 .hero__cta {
@@ -26,6 +32,7 @@
   color: $white;
   padding: 0.5rem 3rem;
   position: relative;
+  text-align: center;
   text-decoration: none;
 
   &:hover {
