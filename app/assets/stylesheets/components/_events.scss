@@ -1,14 +1,33 @@
 .events-container {
-  display: flex;
-  padding-top: 6rem;
-  padding-bottom: 5rem;
-  min-height: 600px;
+  margin: 2rem auto;
+  justify-content: center;
+  max-width: 60rem;
+  width: 90%;
+
+   @include breakpoint("medium") {
+      @supports (display: grid) {
+        align-items: flex-end;
+        display: grid;
+        grid-auto-flow: row;
+        grid-template-columns: 1fr 1fr;
+        grid-gap: 5rem;
+    }
+  }
 }
 
 .upcoming-event-content {
   display: flex;
-  flex: 0 1 55%;
   justify-content: center;
+}
+
+.events-container__item {
+  &:not(:last-child) {
+    margin-bottom: 2rem;
+
+    @include breakpoint("medium") {
+      margin-bottom: 0;
+    }
+  }
 }
 
 .upcoming-event-details {
@@ -28,19 +47,30 @@
 }
 
 .upcoming-event__buttons {
-  margin-top: 3.5rem;
+  display: flex;
+  justify-content: space-between;
+  margin-top: 1.5rem;
 
-   a:first-child {
-     margin-right: 0.5rem;
-   }
+  @supports (display: grid) {
+    display: grid;
+    grid-auto-flow: row;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 1rem;
+  }
 }
 
 .upcoming-event__button {
+  align-items: center;
   border: 1px solid $light-gray;
   border-radius: 4px;
   color: $red;
+  display: inline-flex;
+  flex: 1;
+  justify-content: center;
+  line-height: 1;
   padding: 0.5rem 3rem;
   position: relative;
+  text-align: center;
   text-decoration: none;
 }
 

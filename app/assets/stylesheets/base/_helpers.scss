@@ -1,0 +1,10 @@
+// Breakpoints
+@mixin breakpoint($bp, $rule: min-width) {
+  @if map-has-key($breakpoints, $bp) {
+    @media screen and (#{$rule}: map-get($breakpoints, $bp)) {
+      @content;
+    }
+  } @else {
+    @error "Invalid breakpoint name `#{$bp}`.";
+  }
+}
