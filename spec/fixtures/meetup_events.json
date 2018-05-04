@@ -1,0 +1,45 @@
+[
+  {
+    "created": 1525221805000,
+    "duration": 7200000,
+    "id": "250356742",
+    "name": "Fake Project Night",
+    "rsvp_limit": 75,
+    "status": "upcoming",
+    "time": 1525816800000,
+    "local_date": "2018-05-08",
+    "local_time": "18:00",
+    "rsvp_close_offset": "PT25H",
+    "updated": 1525273120000,
+    "utc_offset": -14400000,
+    "waitlist_count": 0,
+    "yes_rsvp_count": 23,
+    "venue": {
+      "id": 24798784,
+      "name": "thoughtbot",
+      "lat": 42.35497283935547,
+      "lon": -71.05880737304688,
+      "repinned": false,
+      "address_1": "41 Winter Street, 6th Floor",
+      "city": "Boston",
+      "state": "MA",
+      "country": "US",
+      "localized_country_name": "USA"
+    },
+    "group": {
+      "created": 1469574115000,
+      "name": "Boston Ruby Group",
+      "id": 20228196,
+      "join_mode": "approval",
+      "lat": 42.349998474121094,
+      "lon": -71.04000091552734,
+      "urlname": "bostonrb",
+      "who": "Rubyists",
+      "localized_location": "Boston, MA",
+      "region": "en_US"
+    },
+    "link": "https://www.meetup.com/bostonrb/events/250356742/",
+    "description": "<p>For the month of May, we'll be doing a 2-parter!</p> <p>Depending on submissions, we'll be doing lightning talks for the first 30-45 minutes. To submit a talk, go to <a href=\"https://www.papercall.io/bostonrb\" class=\"linkified\">https://www.papercall.io/bostonrb</a>, tell us about your talk (anything Ruby- or tech-related!), and remember to select the \"Lightning Talk\" format before you hit submit!</p> <p>After the talks, we'd like to hold a \"Town Hall Meeting\" to discuss any ideas you might have for future BostonRB events.</p> <p>The Town Hall Meeting will be an open forum for you to tell us where we're doing well and where we can improve. We're also looking for more people to be involved in organizing events for the Boston Ruby community, so please drop by and talk to us!</p> <p>Rough schedule:</p> <p>* 6:00pm - Eat, mingle.<br/>* 6:20pm - Lightning talks begin.<br/>* 7:00/7:15pm - Town Hall Meeting begins.</p> <p>Thanks to ezCater (<a href=\"https://www.ezcater.com/\" class=\"linkified\">https://www.ezcater.com/</a>) for sponsoring food and space for this Meetup!</p> ",
+    "visibility": "public"
+  }
+]

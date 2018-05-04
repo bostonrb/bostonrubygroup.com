@@ -34,12 +34,16 @@
   min-width: 50%;
 }
 
-.upcoming-event-title {
+.upcoming-event-header {
   color: $red;
   font-family: $heading-font-family;
   font-weight: 500;
   font-size: 24px;
   margin-top: 1.5rem;
+}
+
+.upcoming-event-title {
+  font-weight: bold;
 }
 
 .upcoming-event-date {

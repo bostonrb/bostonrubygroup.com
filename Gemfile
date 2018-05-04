@@ -19,6 +19,7 @@ gem "sass-rails", "~> 5.0"
 gem "sprockets", "~> 3.7.2"
 gem "title"
 gem "uglifier"
+gem "httparty"
 
 group :development do
   gem "listen"
