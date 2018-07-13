@@ -16,7 +16,7 @@ gem "puma"
 gem "rack-canonical-host"
 gem "rails", "~> 5.1.3"
 gem "sass-rails", "~> 5.0"
-gem "sprockets", ">= 3.0.0"
+gem "sprockets", "~> 3.7.2"
 gem "title"
 gem "uglifier"
 
