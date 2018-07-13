@@ -1,46 +1,81 @@
-html {
-  color: $base-font-color;
-  font-family: $base-font-family;
-  font-size: $base-font-size;
-  line-height: $base-line-height;
+body {
+  color: $text-color-base;
+  font-family: $font-family-base;
+  font-size: $font-size-base;
+  line-height: $line-height-base;
 }
 
-h1,
+h1 {
+  font-size: $font-size-large;
+  max-width: 35ch;
+
+  @include breakpoint("small") {
+    font-size: $font-size-x-large;
+  }
+}
+
 h2,
-h3,
-h4,
-h5,
-h6 {
-  font-family: $heading-font-family;
-  font-size: modular-scale(1);
-  line-height: $heading-line-height;
-  margin: 0 0 $small-spacing;
+.topic-overline {
+  font-family: $font-family-mono;
+  font-size: $font-size-x-small;
+  font-weight: $font-weight-bold;
+  letter-spacing: $spacing-x-small;
+  margin-top: 0;
+  text-transform: uppercase;
 }
 
 p {
-  margin: 0 0 $small-spacing;
+  margin: 0;
 }
 
 a {
-  color: $red;
+  border-style: solid;
+  border-width: 0 0 2px 0;
+  border-image: linear-gradient(to left, $gradient-sunrise);
+  border-image-slice: 1;
+  color: $offblack;
+  cursor:pointer;
+  display:inline-block;
+  font-weight: $font-weight-bold;
+  line-height: $line-height-tight;
   text-decoration: none;
-  text-decoration-skip: ink;
-  transition: color $base-duration $base-timing;
+  transition: $transition-base ease all;
 
   &:hover {
-    color: $red;
-    text-decoration: underline;
-  }
+    animation: disco-hover 2s forwards infinite;
+    border-image: linear-gradient(to left, transparent, transparent);
 
-  &:focus {
-    outline: none;
+    @media screen and (prefers-reduced-motion: reduce) {
+      animation: none;
+      color: $disco-purple
+    }
   }
 }
 
-hr {
-  border-bottom: $base-border;
-  border-left: 0;
-  border-right: 0;
-  border-top: 0;
-  margin: $base-spacing 0;
+.cta--primary {
+  background-color: transparent;
+  border: 2px solid $disco-purple;
+  color: $disco-purple;
+  letter-spacing: 1px;
+  margin: $spacing-base 0;
+  padding: $spacing-base $spacing-x-large;
+  transition: $transition-base ease all;
+
+  &:hover {
+    animation: none;
+    background-color: $disco-purple;
+    color: $offwhite;
+  }
+}
+
+strong {
+  font-weight: $font-weight-bold;
+}
+
+abbr[title] {
+  text-decoration: none;
+}
+
+time {
+  font-weight: $font-weight-bold;
 }

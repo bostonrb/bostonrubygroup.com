@@ -1,28 +1,30 @@
-<p class="upcoming-event-title">
+<p class="events__item-title">
   <%= event.name %>
 </p>
 
-<div class="upcoming-event-date">
-  <span>
-    <%= event.date %></br>
-    <%= "#{event.formatted_start_time} to #{event.formatted_end_time}" %>
-  </span>
-</div>
+<p><time><%= event.date %></time></p>
 
-<div class="upcoming-event-location">
-  <span>
-    <%= event.venue_name %></br>
-    <%= event.address %></br>
-    <%= "#{event.city}, #{event.state}" %>
-  </span>
-</div>
+<p>
+  <time>
+    <%= event.formatted_start_time %>
+  </time>
+  to
+  <time>
+    <%= event.formatted_end_time %>
+  </time>
+</p>
 
-<div class="upcoming-event__buttons">
-  <%= link_to("RSVP", "#", class: "upcoming-event__button") %>
+<address>
+  <%= event.venue_name %><br>
+  <%= event.address %><br>
+  <%= "#{event.city}, #{event.state}" %>
+</address>
+
+<p>
   <%= link_to(
-    "See all events",
-    "https://www.meetup.com/bostonrb/events/",
-    class: "upcoming-event__button",
+    "RSVP",
+    "#",
+    class: "cta--primary",
     target: "_blank"
-  ) %>
-</div>
+  )%>
+</p>

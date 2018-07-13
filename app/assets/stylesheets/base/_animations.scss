@@ -1,0 +1,9 @@
+@keyframes disco-hover {
+  @for $i from 1 through length($color-list) {
+    $sequence: 100% / length($color-list);
+
+    #{($sequence * $i) - $sequence} {
+      color: nth($color-list, $i);
+    }
+  }
+}

@@ -5,7 +5,7 @@ RSpec.describe "homes/_events.html.erb" do
 
       render
 
-      expect(rendered).to match("There are no upcoming events.")
+      expect(rendered).to match("No Upcoming Event")
     end
   end
 end

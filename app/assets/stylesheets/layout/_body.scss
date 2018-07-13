@@ -1,0 +1,28 @@
+body {
+  display: grid;
+  grid-gap: $spacing-base;
+  grid-template-areas: "header"
+                        "main"
+                        "footer";
+  margin: 0;
+
+  @include breakpoint("small") {
+    grid-gap: $spacing-large;
+    grid-template-areas: "header main"
+                         "header footer";
+  }
+
+  @include breakpoint("large") {
+    grid-template-areas: "header"
+                         "main"
+                         "footer";
+  }
+}
+
+$layout-grid-areas: header, main, footer;
+
+@each $area in $layout-grid-areas {
+  #{$area} {
+    grid-area: $area;
+  }
+}

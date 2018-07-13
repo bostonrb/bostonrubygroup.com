@@ -1,30 +1,25 @@
-<section>
-  <div class="events-container">
-    <div class="events-container__item" data-role="upcoming-event-details">
-      <p class="upcoming-event-header">Our next event</p>
-
+<section class="events">
+  <ul class="events__list">
+    <li class="events__item" data-role="upcoming-event">
+      <h2>Our next event</h2>
       <%= render "upcoming_event", event: @upcoming_event %>
-    </div>
+    </li>
 
-    <div class="events-container__item">
-      <div class="card">
-        <p class="card__title">Project nights</p>
-        <p class="card__header">First Tuesday of the month</p>
+    <li class="events__item">
+      <h2>Project Nights</h2>
+      <small class="events__description">First Tuesday of every month</small>
+      <p>
+        Get help with Rails, hack on some open source, and meet other Ruby
+        enthusiasts.
+      </p>
+    </li>
 
-        <span>
-          Get help with Rails, hack on some open source, meet other Ruby
-          enthusiasts.
-        </span>
-      </div>
-
-      <div class="card">
-        <p class="card__title">Meetings</p>
-        <p class="card__header">Second Tuesday of the month</p>
-
-        <span>
-          Two long-form talks about something cool created with Ruby.
-        </span>
-      </div>
-    </div>
-  </div>
+    <li class="events__item">
+      <h2>Meetings</h2>
+      <small class="events__description">Second Tuesday of every month</small>
+      <p>
+        Listen to two long-form talks about something cool created with Ruby.
+      </p>
+    </li>
+  </ul>
 </section>

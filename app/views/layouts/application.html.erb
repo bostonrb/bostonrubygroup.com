@@ -10,12 +10,15 @@
     https://github.com/calebthompson/title#usage
   %>
   <title><%= title %></title>
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="/assets/WorkSans-Regular.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="/assets/WorkSans-Bold.woff2">
   <%= favicon_link_tag "bostonrb-logo.png" %>
   <%= stylesheet_link_tag :application, media: "all" %>
   <%= csrf_meta_tags %>
 </head>
 <body class="<%= body_class %>">
   <%= render "flashes" -%>
+  <a class="skip-to-main" href="#main-content">Skip to Main Content</a>
   <%= render "layouts/header" %>
   <%= yield %>
   <%= render "layouts/footer" %>

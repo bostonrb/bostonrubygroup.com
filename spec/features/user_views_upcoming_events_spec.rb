@@ -4,7 +4,7 @@ RSpec.feature "user views details for the next event" do
 
     visit root_path
 
-    within("[data-role='upcoming-event-details']") do
+    within("[data-role='upcoming-event']") do
       expect(page).to have_content("Fake Project Night")
       expect(page).to have_content("thoughtbot")
       expect(page).to have_content("41 Winter Street, 6th Floor")

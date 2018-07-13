@@ -1,8 +1,13 @@
-@import "bourbon/bourbon";
+@import "reset/normalize";
+@import "reset/layout";
+@import "bourbon";
 @import "base/base";
-@import "components/about-us";
-@import "components/card";
-@import "components/events";
-@import "components/footer";
-@import "components/header";
-@import "components/hero";
+
+// Layout
+@import "layout/about";
+@import "layout/body";
+@import "layout/content";
+@import "layout/events";
+@import "layout/hero";
+@import "layout/footer";
+@import "layout/nav";

@@ -1,0 +1,26 @@
+.content {
+  @include content-wrapper("horizontal");
+  display: grid;
+  grid-gap: $spacing-large;
+  grid-template-areas: "about"
+                       "events"
+                       "nav";
+
+  @include breakpoint("small") {
+    padding: $spacing-base $spacing-base 0 0;
+  }
+
+  @include breakpoint("large") {
+    grid-template-areas: "nav about about ..."
+                         "nav events events events";
+    padding: 0 $spacing-base;
+  }
+}
+
+$main-grid-areas: nav, about, events;
+
+@each $area in $main-grid-areas {
+  .#{$area} {
+    grid-area: $area;
+  }
+}
