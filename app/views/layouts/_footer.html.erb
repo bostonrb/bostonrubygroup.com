@@ -1,13 +1,15 @@
 <footer>
-  <div class="footer">
-    <p class="footer__tagline">Made possible by</p>
-    <div class="footer__links">
-      <%= link_to "https://thoughtbot.com", target: "_blank" do %>
-        <%= image_tag("thoughtbot-logo.png", class: "footer__link") %>
+  <p>Made possible by:</p>
+  <ul>
+    <li>
+      <%= link_to "https://thoughtbot.com" do %>
+        <%= image_tag("thoughtbot-logo.png") %>
       <% end %>
-      <%= link_to "https://www.ezcater.com", target: "_blank" do %>
-        <%= image_tag("ez-cater-logo.png", class: "footer__link") %>
+    </li>
+    <li>
+      <%= link_to "https://www.ezcater.com" do %>
+        <%= image_tag("ez-cater-logo.png") %>
       <% end %>
-    </div>
-  </div>
+    </li>
+  </ul>
 </footer>

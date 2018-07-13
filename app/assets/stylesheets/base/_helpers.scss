@@ -1,3 +1,16 @@
+// Px to Rem
+@function rem($pixels, $context: $font-size-global) {
+  @if (unitless($pixels)) {
+    $pixels: $pixels * 1px;
+  }
+
+  @if (unitless($context)) {
+    $context: $context * 1px;
+  }
+
+  @return $pixels / $context * 1rem;
+}
+
 // Breakpoints
 @mixin breakpoint($bp, $rule: min-width) {
   @if map-has-key($breakpoints, $bp) {
@@ -7,4 +20,9 @@
   } @else {
     @error "Invalid breakpoint name `#{$bp}`.";
   }
+}
+
+// Z-indexes
+@function get-z-index($index) {
+  @return map-get($z-index, $index);
 }

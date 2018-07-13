@@ -1,60 +1,40 @@
 <section>
-  <div class="events-container">
+  <ul>
+    <li>
+      <h2>Our next event</h2>
+      <p>Meeting</p>
 
-      <div class="events-container__item">
-        <p class="upcoming-event-title">
-          Our next event
-        </p>
-        <p class="upcoming-event-header">
-          <strong>Meeting</strong> (second Tuesday of every month)
-        </p>
-        <div class="upcoming-event-date">
-          <span>
-            February 3, 2018</br>
-            6:45PM to 10:00PM
-          </span>
-        </div>
-        <div class="upcoming-event-location">
-          <span>
-            ezCater</br>
-            101 Arch St, 15th Floor</br>
-            Boston, MA
-          </span>
-        </div>
-        <div class="upcoming-event__buttons">
-          <%= link_to("RSVP", "#", class: "upcoming-event__button") %>
-          <%= link_to(
-            "See all events",
-            "https://www.meetup.com/bostonrb/events/",
-            class: "upcoming-event__button",
-            target: "_blank"
-          ) %>
-        </div>
-      </div>
+      <time datetime="2018-02-03">February 3, 2018</time>
+      <time datetime="2018-02-03 18:45">6:45PM</time> to <time datetime="2018-02-03 20:00">10:00PM</time>
 
-    <div class="events-container__item">
-      <div class="card">
-        <p class="card__title">
-          Project nights
-        </p>
-        <p class="card__header">
-          First Tuesday of the month
-        </p>
-        <span>
-          Get help with rails, hack on some open source, meet other Ruby enthusiasts.
-        </span>
-      </div>
-      <div class="card">
-        <p class="card__title">
-          Meetings
-        </p>
-        <p class="card__header">
-          Second Tuesday of the month
-        </p>
-        <span>
-          Two long-form talks about something cool created with Ruby.
-        </span>
-      </div>
-    </div>
-  </div>
+      <address>
+        ezCater <br>
+        101 Arch St, 15th Floor <br>
+        Boston, MA
+      </address>
+
+      <%= link_to(
+        "RSVP",
+        "#",
+      )%>
+      <%= link_to(
+        "See all events",
+        "https://www.meetup.com/bostonrb/events/",
+      )%>
+    </li>
+
+    <li>
+      <h2>Project Nights</h2>
+      <p>Get help with Rails, hack on some open source, and meet other Ruby enthusiasts.</p>
+
+      <small>First Tuesday of every month</small>
+    </li>
+
+    <li>
+      <h2>Meetings</h2>
+      <p>Listen to two long-form talks about something cool created with Ruby.</p>
+
+      <small>Second Tuesday of every month</small>
+    </li>
+  </ul>
 </section>
