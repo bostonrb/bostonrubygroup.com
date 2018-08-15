@@ -22,7 +22,7 @@
   }
 }
 
-// Z-indexes
+// Z-indexes (thanks Eric Bailey)
 @function get-z-index($index) {
   @return map-get($z-index, $index);
 }
