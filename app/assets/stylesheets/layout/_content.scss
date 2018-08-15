@@ -1,0 +1,19 @@
+.content {
+  max-width: 60rem;
+  margin: 0 auto;
+
+  @include breakpoint("large") {
+    display: grid;
+    grid-gap: $spacing-large;
+    grid-template-areas: "nav about about ..."
+                         "nav events events events";
+  }
+}
+
+$main-grid-areas: nav, about, events;
+
+@each $area in $main-grid-areas {
+  .#{$area} {
+    grid-area: $area;
+  }
+}

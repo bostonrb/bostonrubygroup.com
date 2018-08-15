@@ -1,0 +1,47 @@
+$_media-height: 100vh;
+
+.hero {
+  display: grid;
+
+  @include breakpoint("small") {
+    height: 0vh; // Trick to keep split view sticky in grid
+    position: sticky;
+    top: 0;
+  }
+
+  @include breakpoint("large") {
+    height: auto;
+    position: static;
+  }
+}
+
+.hero__media {
+  z-index: get-z-index("basement");
+
+  @include breakpoint("small") {
+    height: $_media-height;
+    grid-column: 1 / 2;
+    grid-row: 1 / 3;
+  }
+
+  @include breakpoint("large") {
+    height: auto;
+  }
+
+  img {
+    @include size(100%);
+    object-fit: cover;
+    object-position: 75%;
+
+    @include breakpoint("small") {
+      object-position: 50%;
+    }
+  }
+}
+
+.hero__content {
+  @include breakpoint("small") {
+    grid-column: 1 / 2;
+    grid-row: 2 / 3;
+  }
+}

@@ -1,3 +1,11 @@
 @import "reset/normalize";
+@import "reset/layout";
 @import "bourbon";
 @import "base/base";
+
+// Layout
+@import "layout/body";
+@import "layout/content";
+@import "layout/events";
+@import "layout/hero";
+@import "layout/footer";
