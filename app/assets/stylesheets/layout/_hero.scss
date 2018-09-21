@@ -12,24 +12,68 @@ $_media-height: 100vh;
   @include breakpoint("large") {
     height: auto;
     position: static;
+    grid-template-columns: repeat(7, 1fr);
+    grid-template-rows: repeat(5, 0.5fr);
+  }
+
+  &::before,
+  &::after {
+    content: "";
+    display: block;
+    opacity: 0.35;
+
+    @include breakpoint("large") {
+      opacity: 0.75;
+    }
+  }
+
+  &::before {
+    background-image: linear-gradient(to bottom, $salmon, $seafoam);
+
+    @include breakpoint("large") {
+      grid-column: 1 / 4;
+      grid-row: 1 / 4;
+    }
+  }
+
+  &::after {
+    background-image: linear-gradient(to bottom, $disco-purple, $salmon);
+    grid-column: 1 / 2;
+    grid-row: 1 / 3;
+
+    @include breakpoint("large") {
+      grid-column: 7 / 8;
+      grid-row: 3 / 7;
+    }
   }
 }
 
 .hero__media {
+  grid-column: 1 / 2;
+  grid-row: 1 / 3;
+  position: relative;
   z-index: get-z-index("basement");
 
   @include breakpoint("small") {
     height: $_media-height;
-    grid-column: 1 / 2;
-    grid-row: 1 / 3;
+
+    &::after {
+      @include position(absolute, 0);
+      background-image: linear-gradient(to top, $offblack, rgba($offblack, 0));
+      content: "";
+      display: block;
+    }
   }
 
   @include breakpoint("large") {
     height: auto;
+    grid-column: 2 / 8;
+    grid-row: 1 / 5;
   }
 
   img {
     @include size(100%);
+    min-height: $_media-height / 3;
     object-fit: cover;
     object-position: 75%;
 
@@ -40,8 +84,19 @@ $_media-height: 100vh;
 }
 
 .hero__content {
+  padding: $spacing-base;
+  position: relative;
+  z-index: get-z-index("layout");
+
   @include breakpoint("small") {
+    color: $offwhite;
     grid-column: 1 / 2;
     grid-row: 2 / 3;
+  }
+
+  @include breakpoint("large") {
+    grid-column: 3 / 6;
+    grid-row: 4 / 5;
+    margin-top: auto;
   }
 }
