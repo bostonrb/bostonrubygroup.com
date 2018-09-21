@@ -9,7 +9,6 @@ body {
   }
 
   @include breakpoint("large") {
-    grid-gap: 0;
     grid-template-areas: "header"
                          "main"
                          "footer";
