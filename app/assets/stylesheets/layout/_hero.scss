@@ -57,11 +57,11 @@ $_media-height: 100vh;
   @include breakpoint("small") {
     height: $_media-height;
 
-  &::after {
-    @include position(absolute, 0);
-    background-image: linear-gradient(to top, $offblack, rgba($offblack, 0));
-    content: "";
-    display: block;
+    &::after {
+      @include position(absolute, 0);
+      background-image: linear-gradient(to top, $offblack, rgba($offblack, 0));
+      content: "";
+      display: block;
     }
   }
 
@@ -73,9 +73,9 @@ $_media-height: 100vh;
 
   img {
     @include size(100%);
+    min-height: $_media-height / 3;
     object-fit: cover;
     object-position: 75%;
-    min-height: $_media-height / 3;
 
     @include breakpoint("small") {
       object-position: 50%;
