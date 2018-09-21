@@ -11,7 +11,7 @@ $breakpoints: (
 
 // Font stacks
 $font-family-base: "WorkSans", $font-stack-system;
-$font-family-mono: $font-stack-consolas;
+$font-family-mono: "RobotoMono", $font-stack-consolas;
 
 // Font weights
 $font-weight-normal: 400;

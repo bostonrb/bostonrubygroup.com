@@ -9,3 +9,9 @@
   font-style: normal;
   font-weight: $font-weight-bold;
 }
+
+@include font-face("RobotoMono", "RobotoMono-Bold") {
+  font-display: swap;
+  font-style: normal;
+  font-weight: $font-weight-bold;
+}
