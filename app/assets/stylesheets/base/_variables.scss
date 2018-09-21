@@ -10,7 +10,7 @@ $breakpoints: (
 );
 
 // Font stacks
-$font-family-base: $font-stack-system;
+$font-family-base: "WorkSans", $font-stack-system;
 $font-family-mono: $font-stack-consolas;
 
 // Font weights
@@ -45,6 +45,14 @@ $offwhite: #efefef;
 $salmon: #a6493f;
 $seafoam: #73b7b4;
 $disco-purple: #ad43a8;
+
+// Text Colors
+$text-color-base: $offblack;
+$text-color-inverse: $offwhite;
+
+// Gradients
+$gradient-sunrise: $salmon, $seafoam;
+$gradient-sunset: $disco-purple, $salmon;
 
 // Z-Indexes
 $z-index: (

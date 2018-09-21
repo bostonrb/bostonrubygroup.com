@@ -28,7 +28,7 @@ $_media-height: 100vh;
   }
 
   &::before {
-    background-image: linear-gradient(to bottom, $salmon, $seafoam);
+    background-image: linear-gradient(to bottom, $gradient-sunrise);
 
     @include breakpoint("large") {
       grid-column: 1 / 4;
@@ -37,7 +37,7 @@ $_media-height: 100vh;
   }
 
   &::after {
-    background-image: linear-gradient(to bottom, $disco-purple, $salmon);
+    background-image: linear-gradient(to bottom, $gradient-sunset);
     grid-column: 1 / 2;
     grid-row: 1 / 3;
 
@@ -90,7 +90,7 @@ $_media-height: 100vh;
   z-index: get-z-index("layout");
 
   @include breakpoint("small") {
-    color: $offwhite;
+    color: $text-color-inverse;
     grid-column: 1 / 2;
     grid-row: 2 / 3;
   }
