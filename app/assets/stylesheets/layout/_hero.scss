@@ -2,9 +2,13 @@ $_media-height: 100vh;
 
 .hero {
   display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  grid-template-rows: repeat(4, 1fr);
 
   @include breakpoint("small") {
     height: 0vh; // Trick to keep split view sticky in grid
+    grid-template-columns: auto;
+    grid-template-rows: auto;
     position: sticky;
     top: 0;
   }
@@ -29,8 +33,10 @@ $_media-height: 100vh;
 
   &::before {
     background-image: linear-gradient(to bottom, $gradient-sunrise);
+    display: none;
 
     @include breakpoint("large") {
+      display: block;
       grid-column: 1 / 4;
       grid-row: 1 / 4;
     }
@@ -39,7 +45,12 @@ $_media-height: 100vh;
   &::after {
     background-image: linear-gradient(to bottom, $gradient-sunset);
     grid-column: 1 / 2;
-    grid-row: 1 / 3;
+    grid-row: 1 / 4;
+    margin: $spacing-base;
+
+    @include breakpoint("small") {
+      margin: 0;
+    }
 
     @include breakpoint("large") {
       grid-column: 7 / 8;
@@ -51,16 +62,18 @@ $_media-height: 100vh;
 
 .hero__media {
   grid-column: 1 / 2;
-  grid-row: 1 / 3;
+  grid-row: 1 / 4;
   position: relative;
+  margin: $spacing-base;
   z-index: get-z-index("basement");
 
   @include breakpoint("small") {
     height: $_media-height;
+    margin: 0;
 
     &::after {
       @include position(absolute, 0);
-      background-image: linear-gradient(to top, $offblack, rgba($offblack, 0));
+      background-image: linear-gradient(to top, $offblack 20%, rgba($offblack, 0));
       content: "";
       display: block;
     }
@@ -85,14 +98,18 @@ $_media-height: 100vh;
 }
 
 .hero__content {
-  padding: $spacing-base;
+  @include content-wrapper("all");
+  background-color: white;
+  grid-column: 1 / 2;
+  grid-row: 3 / 5;
   position: relative;
   z-index: get-z-index("layout");
 
   @include breakpoint("small") {
+    background-color: transparent;
     color: $text-color-inverse;
     grid-column: 1 / 2;
-    grid-row: 2 / 3;
+    grid-row: 3 / 3;
   }
 
   @include breakpoint("large") {

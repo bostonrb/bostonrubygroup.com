@@ -26,3 +26,21 @@
 @function get-z-index($index) {
   @return map-get($z-index, $index);
 }
+
+// Content wrapper
+@mixin content-wrapper($spacing: horizontal) {
+  margin: 0 auto;
+  max-width: 60rem;
+
+  @if $spacing == "horizontal" {
+    padding: 0 $spacing-base;
+  }
+
+  @if $spacing == "vertical" {
+    padding: $spacing-base 0;
+  }
+
+  @if $spacing == "all" {
+    padding: $spacing-base;
+  }
+}

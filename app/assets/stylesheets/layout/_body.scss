@@ -1,8 +1,12 @@
 body {
+  display: grid;
+  grid-gap: $spacing-base;
+  grid-template-areas: "header"
+                        "main"
+                        "footer";
   margin: 0;
 
   @include breakpoint("small") {
-    display: grid;
     grid-gap: $spacing-large;
     grid-template-areas: "header main"
                          "header footer";
