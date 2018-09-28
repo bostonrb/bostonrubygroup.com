@@ -1,6 +1,27 @@
 body {
+  color: $text-color-base;
+  font-family: $font-family-base;
   font-size: $font-size-base;
   line-height: $line-height-base;
+}
+
+h1 {
+  font-size: $font-size-large;
+  max-width: 35ch;
+
+  @include breakpoint("small") {
+    font-size: $font-size-x-large;
+  }
+}
+
+h2,
+.topic-overline {
+  font-family: $font-family-mono;
+  font-size: $font-size-x-small;
+  font-weight: $font-weight-bold;
+  letter-spacing: $spacing-x-small;
+  margin-top: 0;
+  text-transform: uppercase;
 }
 
 p {

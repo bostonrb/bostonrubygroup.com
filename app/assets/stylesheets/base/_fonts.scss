@@ -1,0 +1,17 @@
+@include font-face("WorkSans", "WorkSans-Regular") {
+  font-display: swap;
+  font-style: normal;
+  font-weight: $font-weight-normal;
+}
+
+@include font-face("WorkSans", "WorkSans-Bold") {
+  font-display: swap;
+  font-style: normal;
+  font-weight: $font-weight-bold;
+}
+
+@include font-face("RobotoMono", "RobotoMono-Bold") {
+  font-display: swap;
+  font-style: normal;
+  font-weight: $font-weight-bold;
+}
