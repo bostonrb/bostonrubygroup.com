@@ -1,3 +1,28 @@
 .footer {
   align-self: end;
+  background-color: $offblack;
+  padding: $spacing-large 0;
+
+  @include breakpoint("small") {
+    box-shadow: -($spacing-base) $spacing-base 0px $spacing-base $offblack;
+  }
+}
+
+.footer__overline {
+  color: $text-color-inverse;
+  text-align: center;
+  margin-bottom: $spacing-base;
+}
+
+.footer__list {
+  display: flex;
+  justify-content: center;
+}
+
+.footer__item {
+  padding: 0 $spacing-base;
+}
+
+.footer__image {
+  max-height: $spacing-x-large;
 }
