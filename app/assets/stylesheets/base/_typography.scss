@@ -28,6 +28,30 @@ p {
   margin: 0;
 }
 
+a {
+  border-style: solid;
+  border-width: 0 0 2px 0;
+  border-image: linear-gradient(to left, $gradient-sunrise);
+  border-image-slice: 1;
+  color: $offblack;
+  cursor:pointer;
+  display:inline-block;
+  font-weight: $font-weight-bold;
+  line-height: $line-height-tight;
+  text-decoration: none;
+  transition: $transition-base ease all;
+
+  &:hover {
+    animation: disco-hover 2s forwards infinite;
+    border-image: linear-gradient(to left, transparent, transparent);
+
+    @media screen and (prefers-reduced-motion: reduce) {
+      animation: none;
+      color: $disco-purple
+    }
+  }
+}
+
 strong {
   font-weight: $font-weight-bold;
 }

@@ -10,8 +10,8 @@
 }
 
 .events__item {
-  @for $i from 1 through length($color-list-subheads) {
-    $color: nth($color-list-subheads, $i);
+  @for $i from 1 through length($color-list) {
+    $color: nth($color-list, $i);
 
     &:nth-of-type(#{$i}) {
       h2 {
