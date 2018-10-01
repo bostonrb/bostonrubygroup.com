@@ -4,7 +4,7 @@
   padding: $spacing-large 0;
 
   @include breakpoint("small") {
-    box-shadow: -($spacing-base) $spacing-base 0px $spacing-base $offblack;
+    box-shadow: -($spacing-base) $spacing-base 0 $spacing-base $offblack;
   }
 }
 
@@ -36,25 +36,17 @@
 
 .footer__link {
   display: block;
-  background-clip: padding-box, border-box;
-  background-image: linear-gradient($offblack, $offblack), radial-gradient(circle at top left, $gradient-sunset);
-  background-origin: border-box;
+  background-image: linear-gradient(rgba($offblack, 1) 30%, rgba($offblack, 0.5)), radial-gradient(circle at top left, $gradient-sunset);
   background-size: 100% 300%;
-  border: 4px solid $offblack;
-  border-radius: $border-radius-medium;
-  padding: $spacing-small;
-  transition: $transition-base ease all;
+  padding: $spacing-base;
+  transition: $transition-base ease background-position;
 
   &:hover {
-    background-image: linear-gradient(rgba($offblack, 0.8), rgba($offblack, 0.8)), radial-gradient(circle at top left, $gradient-sunset);
-    border-color: transparent;
+    background-position: 150% 100%;
   }
 }
 
 .footer__image {
   max-height: $spacing-large;
   transition: $transition-base ease filter;
-
-  .footer__link:hover & {
-  }
 }
