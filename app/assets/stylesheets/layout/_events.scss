@@ -38,3 +38,12 @@
     }
   }
 }
+
+.events__item-title {
+  font-weight: $font-weight-bold;
+}
+
+.events__description {
+  margin-bottom: $spacing-medium;
+  display: block;
+}

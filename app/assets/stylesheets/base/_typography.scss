@@ -25,6 +25,7 @@ h2,
 }
 
 p {
+  font-size: $font-size-base;
   margin: 0;
 }
 
@@ -34,4 +35,8 @@ strong {
 
 abbr[title] {
   text-decoration: none;
+}
+
+time {
+  font-weight: $font-weight-bold;
 }
