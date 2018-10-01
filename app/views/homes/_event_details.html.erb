@@ -1,8 +1,10 @@
-<p class="events__item-title">
+<p class="events__item-title" data-role="event-name">
   <%= event.name %>
 </p>
 
-<p><time><%= event.date %></time></p>
+<p data-role="event-date-info">
+  <time><%= event.date %></time>
+</p>
 
 <p>
   <time>
@@ -14,7 +16,7 @@
   </time>
 </p>
 
-<address>
+<address data-role="event-venue-info">
   <%= event.venue_name %><br>
   <%= event.address %><br>
   <%= "#{event.city}, #{event.state}" %>
@@ -23,8 +25,15 @@
 <p>
   <%= link_to(
     "RSVP",
-    "#",
-    class: "cta--primary",
-    target: "_blank"
+    event.rsvp_url,
+    class: "cta--primary"
+  ) %>
+</p>
+
+<p>
+  <%= link_to(
+    "See all events",
+    event.events_url,
+    class: "upcoming-event__button"
   )%>
 </p>

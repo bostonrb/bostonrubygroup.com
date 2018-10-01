@@ -97,4 +97,26 @@ RSpec.describe MeetupEvent do
       expect(event.state).to eq("Massachusetts")
     end
   end
+
+  describe "#rsvp_url" do
+    it "returns the event URL for the meetup group" do
+      meetup_event_url = "https://www.meetup.com/abc/events/123"
+      meetup_event_data = {"link" => meetup_event_url}
+
+      event = MeetupEvent.new(meetup_event_data)
+
+      expect(event.rsvp_url).to eq(meetup_event_url)
+    end
+  end
+
+  describe "#events_url" do
+    it "returns the events URL for the meetup group" do
+      group_name = "bostonrb"
+      meetup_event_data = {"group" => {"urlname" => group_name}}
+
+      event = MeetupEvent.new(meetup_event_data)
+
+      expect(event.events_url).to eq("https://www.meetup.com/bostonrb/events")
+    end
+  end
 end

@@ -51,6 +51,21 @@ class MeetupEvent
     venue[:state]
   end
 
+  def rsvp_url
+    data[:link]
+  end
+
+  def group_name
+    data[:group][:urlname]
+  end
+
+  def events_url
+    URI.join(
+      ENV.fetch("MEETUP_URL"),
+      "#{group_name}/events"
+    ).to_s
+  end
+
   private
   attr_reader :data
 
