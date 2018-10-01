@@ -52,6 +52,22 @@ a {
   }
 }
 
+.cta--primary {
+  background-color: transparent;
+  border: 2px solid $disco-purple;
+  color: $disco-purple;
+  letter-spacing: 1px;
+  margin: $spacing-base 0;
+  padding: $spacing-base $spacing-x-large;
+  transition: $transition-base ease all;
+
+  &:hover {
+    animation: none;
+    background-color: $disco-purple;
+    color: $offwhite;
+  }
+}
+
 strong {
   font-weight: $font-weight-bold;
 }
