@@ -38,3 +38,14 @@
     }
   }
 }
+
+.events__item-title {
+  font-size: $font-size-medium;
+  font-weight: $font-weight-bold;
+  margin-bottom: $spacing-medium;
+}
+
+.events__description {
+  margin-bottom: $spacing-medium;
+  display: block;
+}
