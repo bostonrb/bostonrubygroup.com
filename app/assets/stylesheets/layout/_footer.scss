@@ -1,3 +1,52 @@
 .footer {
   align-self: end;
+  background-color: $offblack;
+  padding: $spacing-large 0;
+
+  @include breakpoint("small") {
+    box-shadow: -($spacing-base) $spacing-base 0 $spacing-base $offblack;
+  }
+}
+
+.footer__overline {
+  color: $text-color-inverse;
+  text-align: center;
+  margin-bottom: $spacing-base;
+}
+
+.footer__list {
+  display: flex;
+  justify-content: center;
+}
+
+.footer__item {
+  display: inline-flex;
+  padding: 0 $spacing-small;
+
+  &:not(:first-of-type) {
+    &::before {
+      align-items: center;
+      color: rgba($offwhite, 0.5);
+      content: "+";
+      display: flex;
+      padding-right: $spacing-base;
+    }
+  }
+}
+
+.footer__link {
+  display: block;
+  background-image: linear-gradient(rgba($offblack, 1) 30%, rgba($offblack, 0.5)), radial-gradient(circle at top left, $gradient-sunset);
+  background-size: 100% 300%;
+  padding: $spacing-base;
+  transition: $transition-base ease background-position;
+
+  &:hover {
+    background-position: 150% 100%;
+  }
+}
+
+.footer__image {
+  max-height: $spacing-large;
+  transition: $transition-base ease filter;
 }
