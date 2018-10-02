@@ -34,6 +34,7 @@ group :development, :test do
   gem "dotenv-rails"
   gem "factory_bot_rails"
   gem "pry-rails"
+  gem "rspec_junit_formatter"
   gem "rspec-rails", "~> 3.6"
 end
 

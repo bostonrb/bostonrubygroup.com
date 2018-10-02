@@ -1,0 +1,70 @@
+version: 2
+jobs:
+  build:
+    parallelism: 2
+    working_directory: ~/bostonrb
+    docker:
+      - image: circleci/ruby:2.5.1-node-browsers
+        environment:
+          PGHOST: localhost
+          PGUSER: bostonrb
+          RAILS_ENV: test
+      - image: circleci/postgres:10.4-alpine
+        environment:
+          POSTGRES_USER: bostonrb
+          POSTGRES_DB: bostonrb_test
+          POSTGRES_PASSWORD: ""
+
+    steps:
+      - checkout
+
+      - run:
+          name: Copy environment variables
+          command: cp .env.sample .env
+
+      - restore_cache:
+          keys:
+            - bostonrb-bundle-{{ arch }}-{{ checksum "Gemfile.lock" }}
+            # fallback to using the latest cache if no exact match is found
+            - bostonrb-bundle-
+
+      - run:
+          name: Bundle install
+          command: |
+            bundle install --jobs=4 --retry=3 --path vendor/bundle
+
+      - run:
+          name: Audit bundle
+          command: bundle exec bundle audit check --update
+
+      - save_cache:
+          paths:
+            - ./vendor/bundle
+          key: bostonrb-bundle-{{ arch }}-{{ checksum "Gemfile.lock" }}
+
+      - run:
+          name: Wait for database
+          command: dockerize -wait tcp://localhost:5432 -timeout 1m
+
+      # Database setup
+      - run: bin/rails db:create --trace
+      - run: bin/rails db:schema:load --trace
+
+      # Run tests
+      - run:
+          name: Run tests
+          command: |
+            mkdir /tmp/test-results
+            TEST_FILES="$(circleci tests glob "spec/**/*_spec.rb" | circleci tests split --split-by=timings)"
+
+            bundle exec rspec --format progress \
+                              --format RspecJunitFormatter \
+                              --out /tmp/test-results/rspec.xml \
+                              $TEST_FILES
+
+      # collect reports
+      - store_test_results:
+          path: /tmp/test-results
+      - store_artifacts:
+          path: /tmp/test-results
+          destination: test-results
