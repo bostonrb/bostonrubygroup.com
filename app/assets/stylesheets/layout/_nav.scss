@@ -1,5 +1,7 @@
 .nav {
-  text-align: right;
+  @include breakpoint("large") {
+    text-align: right;
+  }
 }
 
 .nav__list {
