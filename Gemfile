@@ -45,6 +45,6 @@ group :test do
   gem "webmock"
 end
 
-group :production do
+group :staging, :production do
   gem "rack-timeout"
 end
