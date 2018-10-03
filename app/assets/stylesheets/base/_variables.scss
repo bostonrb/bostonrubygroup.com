@@ -1,6 +1,7 @@
 // Bourbon settings
 $bourbon: (
   "global-font-file-formats": ("woff2", "woff"),
+  "rails-asset-pipeline": true,
 );
 
 // Breakpoints
