@@ -228,8 +228,8 @@ PLATFORMS
 DEPENDENCIES
   autoprefixer-rails
   awesome_print
-  bourbon (~> 5.0)
-  bundler-audit (>= 0.5.0)
+  bourbon
+  bundler-audit
   database_cleaner
   dotenv-rails
   factory_bot_rails
@@ -239,7 +239,7 @@ DEPENDENCIES
   jquery-rails
   launchy
   listen
-  pg (~> 0.18)
+  pg
   pry-rails
   puma
   rack-canonical-host
@@ -249,8 +249,8 @@ DEPENDENCIES
   rails (~> 5.1.3)
   rspec-rails
   rspec_junit_formatter
-  sass-rails (~> 5.0)
-  sprockets (~> 3.7.2)
+  sass-rails
+  sprockets
   title
   uglifier
   web-console
