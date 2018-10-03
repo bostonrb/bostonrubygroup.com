@@ -29,4 +29,3 @@ Rails.application.configure do
     "Cache-Control" => "public, max-age=31557600",
   }
 end
-Rack::Timeout.timeout = ENV.fetch("RACK_TIMEOUT", 10).to_i
