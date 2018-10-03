@@ -8,19 +8,19 @@ end
 ruby "2.5.1"
 
 gem "autoprefixer-rails"
-gem "bourbon", "~> 5.0"
+gem "bourbon"
 gem "flutie"
+gem "httparty"
 gem "jquery-rails"
-gem "pg", "~> 0.18"
+gem "pg"
 gem "puma"
 gem "rack-canonical-host"
 gem "rack-rewrite"
 gem "rails", "~> 5.1.3"
-gem "sass-rails", "~> 5.0"
-gem "sprockets", "~> 3.7.2"
+gem "sass-rails"
+gem "sprockets"
 gem "title"
 gem "uglifier"
-gem "httparty"
 
 group :development do
   gem "listen"
@@ -30,13 +30,13 @@ end
 
 group :development, :test do
   gem "awesome_print"
-  gem "bundler-audit", ">= 0.5.0", require: false
+  gem "bundler-audit", require: false
   gem "capybara"
   gem "dotenv-rails"
   gem "factory_bot_rails"
   gem "pry-rails"
-  gem "rspec_junit_formatter"
   gem "rspec-rails"
+  gem "rspec_junit_formatter"
 end
 
 group :test do
