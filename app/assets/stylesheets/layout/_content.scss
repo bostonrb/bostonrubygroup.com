@@ -1,7 +1,8 @@
 .content {
   @include content-wrapper("horizontal");
   display: grid;
-  grid-gap: $spacing-large;
+  outline: 0;
+  grid-gap: $spacing-xx-large;
   grid-template-areas: "about"
                        "events"
                        "nav";
@@ -11,6 +12,7 @@
   }
 
   @include breakpoint("large") {
+    grid-gap: $spacing-large;
     grid-template-areas: "nav about about ..."
                          "nav events events events";
     padding: 0 $spacing-base;

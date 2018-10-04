@@ -1,6 +1,10 @@
 .nav {
   @include breakpoint("large") {
     text-align: right;
+
+    h2::after {
+      margin-left: auto;
+    }
   }
 }
 
