@@ -47,10 +47,6 @@ class MeetupEvent
     venue[:city]
   end
 
-  def state
-    venue[:state]
-  end
-
   def rsvp_url
     data[:link]
   end

@@ -88,16 +88,6 @@ RSpec.describe MeetupEvent do
     end
   end
 
-  describe "#state" do
-    it "returns the venue state" do
-      meetup_event_data = {"venue" => {"state" => "Massachusetts"}}
-
-      event = MeetupEvent.new(meetup_event_data)
-
-      expect(event.state).to eq("Massachusetts")
-    end
-  end
-
   describe "#rsvp_url" do
     it "returns the event URL for the meetup group" do
       meetup_event_url = "https://www.meetup.com/abc/events/123"

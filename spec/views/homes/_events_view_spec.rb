@@ -5,9 +5,11 @@ RSpec.describe "homes/_events.html.erb", type: :view do
 
       render
 
-      within_role("upcoming-event-details") do
-        expect(rendered).to have_text("No Upcoming Event")
-      end
+      expect(rendered).to have_no_upcoming_event_message
     end
+  end
+
+  def have_no_upcoming_event_message
+    have_role_text("upcoming-event", "No Upcoming Event")
   end
 end

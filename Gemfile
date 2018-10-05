@@ -31,6 +31,7 @@ end
 group :development, :test do
   gem "awesome_print"
   gem "bundler-audit", ">= 0.5.0", require: false
+  gem "capybara"
   gem "dotenv-rails"
   gem "factory_bot_rails"
   gem "pry-rails"

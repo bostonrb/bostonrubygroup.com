@@ -6,18 +6,12 @@ RSpec.describe "homes/_event_details.html.erb_spec.rb", type: :view do
 
     expect(rendered).to have_event_name(event.name)
 
-    within_role("event-date-info") do
-      expect(rendered).to have_text(event.date)
-      expect(rendered).to have_text(event.formatted_start_time)
-      expect(rendered).to have_text(event.formatted_end_time)
-    end
-
-    within_role("event-venue-info") do
-      expect(rendered).to have_text(event.venue_name)
-      expect(rendered).to have_text(event.address)
-      expect(rendered).to have_text(event.city)
-      expect(rendered).to have_text(event.state)
-    end
+    expect(rendered).to have_content(event.date)
+    expect(rendered).to have_content(event.formatted_start_time)
+    expect(rendered).to have_content(event.formatted_end_time)
+    expect(rendered).to have_content(event.venue_name)
+    expect(rendered).to have_content(event.address)
+    expect(rendered).to have_content(event.city)
 
     expect(rendered).to have_link("RSVP", href: event.rsvp_url)
     expect(rendered).to have_link("See all events", href: event.events_url)

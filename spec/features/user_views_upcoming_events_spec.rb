@@ -8,7 +8,7 @@ RSpec.feature "user views details for the next event" do
       expect(page).to have_content("Fake Project Night")
       expect(page).to have_content("thoughtbot")
       expect(page).to have_content("41 Winter Street, 6th Floor")
-      expect(page).to have_content("Boston, MA")
+      expect(page).to have_content("Boston")
       expect(page).to have_content("6:00PM to 8:00PM")
     end
   end
