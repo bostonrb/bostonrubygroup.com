@@ -47,7 +47,6 @@ jobs:
           command: dockerize -wait tcp://localhost:5432 -timeout 1m
 
       # Database setup
-      - run: bin/rails db:create --trace
       - run: bin/rails db:schema:load --trace
 
       # Run tests
