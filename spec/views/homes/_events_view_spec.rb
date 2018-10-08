@@ -1,7 +1,7 @@
 RSpec.describe "homes/_events.html.erb", type: :view do
   context "when the next event is unknown" do
-    it "display that the upcoming event is unknown" do
-      assign(:upcoming_event, UnknownMeetupEvent.new)
+    it "displays a helpful message" do
+      assign(:upcoming_event, EventPresenter.new(nil))
 
       render
 

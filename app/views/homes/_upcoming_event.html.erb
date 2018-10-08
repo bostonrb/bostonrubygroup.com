@@ -1,4 +1,4 @@
-<% if @upcoming_event.found? %>
+<% if @upcoming_event.present? %>
   <%= render "event_details", event: @upcoming_event %>
 <% else %>
   <p>No Upcoming Event</p>

@@ -8,11 +8,11 @@
 
 <p>
   <time>
-    <%= event.formatted_start_time %>
+    <%= event.start_time %>
   </time>
   to
   <time>
-    <%= event.formatted_end_time %>
+    <%= event.end_time %>
   </time>
 </p>
 
@@ -25,7 +25,7 @@
 <p>
   <%= link_to(
     "RSVP",
-    event.rsvp_url,
+    event.url,
     class: "cta--primary"
   ) %>
 </p>

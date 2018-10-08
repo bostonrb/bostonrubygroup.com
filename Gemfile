@@ -7,6 +7,7 @@ end
 
 ruby "2.5.1"
 
+gem "attr_extras"
 gem "autoprefixer-rails"
 gem "bourbon", "~> 5.0"
 gem "flutie"
