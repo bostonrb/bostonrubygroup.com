@@ -17,3 +17,10 @@ en:
 
   titles:
     application: Boston Ruby Group
+
+  meta_tags:
+    description:
+      Boston Ruby Group helps you make connections, hack on
+      projects, learn new things, and have fun with other Ruby enthusiasts.
+    image_alt_text:
+      Photograph of attendees at a Boston Ruby Group event.
