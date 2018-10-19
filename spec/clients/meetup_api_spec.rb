@@ -10,7 +10,7 @@ RSpec.describe MeetupApi do
 
       expect(HttpClient)
         .to have_received(:get)
-        .with("https://api.meetup.com/#{meetup_group}/events")
+        .with("https://api.meetup.com/#{meetup_group}/events?has_ended=false")
     end
   end
 end
