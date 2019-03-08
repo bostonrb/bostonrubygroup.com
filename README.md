@@ -34,3 +34,15 @@ you can deploy to staging and production with:
 
     % ./bin/deploy staging
     % ./bin/deploy production
+
+## Hosting
+
+The production site is hosted on Heroku, which uses dynamic IPs. For best results, avoid using A or AAAA DNS records to Heroku resources. For the domain apex (root), prefer [CNAME flattening](https://blog.cloudflare.com/introducing-cname-flattening-rfc-compliant-cnames-at-a-domains-root/).
+
+At the time of this writing, the correct DNS records to reliably resolve to Heroku are:
+```
+bostonrb.org.	1	IN	CNAME	bostonrb.org.herokudns.com.
+www.bostonrb.org.	1	IN	CNAME	www.bostonrb.org.herokudns.com.
+```
+
+For TLS termination, both [Heroku ACM](https://devcenter.heroku.com/articles/automated-certificate-management) (paid dynos only) and [Cloudflare free SSL](https://www.cloudflare.com/ssl/) are viable options (enable "orange cloud" to turn on the reverse proxy).
