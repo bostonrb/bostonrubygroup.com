@@ -4,7 +4,7 @@ jobs:
     parallelism: 2
     working_directory: ~/bostonrb
     docker:
-      - image: circleci/ruby:2.5-node-browsers
+      - image: circleci/ruby:2.6-node-browsers
         environment:
           PGHOST: localhost
           PGUSER: bostonrb
