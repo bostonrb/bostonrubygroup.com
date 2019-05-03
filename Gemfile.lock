@@ -48,7 +48,7 @@ GEM
     autoprefixer-rails (9.5.1)
       execjs
     awesome_print (1.8.0)
-    bindex (0.5.0)
+    bindex (0.7.0)
     bootsnap (1.4.1)
       msgpack (~> 1.0)
     bourbon (5.1.0)
