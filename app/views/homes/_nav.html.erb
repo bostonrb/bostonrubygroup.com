@@ -5,7 +5,7 @@
       <%= link_to("Meetup", "https://www.meetup.com/bostonrb/") %>
     </li>
     <li class="nav__item">
-      <%= link_to("Slack", "http://slack.bostonrb.org/") %>
+      <%= link_to("Slack", ENV.fetch('SLACK_JOIN_URL', "https://communityinviter.com/apps/bostonrb/bostonrb")) %>
     </li>
     <li class="nav__item">
       <%= link_to("Twitter", "https://twitter.com/bostonrb/") %>
