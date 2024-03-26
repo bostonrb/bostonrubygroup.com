@@ -1,4 +1,4 @@
-# bostonrubygroup.org
+# bostonrubygroup.com
 
 This is the source code for the Boston Ruby Group website: https://www.bostonrubygroup.com/
 
