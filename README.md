@@ -4,8 +4,10 @@ This is the source code for the Boston Ruby Group website: https://www.bostonrub
 
 ## Local development
 
-* npm install
-* npm start
+* bundle
+* ruby app.rb
+
+Note that ruby is only used in local development.
 
 ## Deployment
 

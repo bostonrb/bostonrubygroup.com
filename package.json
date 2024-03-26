@@ -1,8 +1,0 @@
-{
-  "dependencies": {
-    "express": "^4.19.2"
-  },
-  "scripts": {
-    "start": "node devserver.js"
-  }
-}
