@@ -1,19 +1,12 @@
 # bostonrubygroup.org
 
-Run the service that hits the meetup.com API locally:
+This is the source code for the Boston Ruby Group website: https://www.bostonrubygroup.com/
 
-```sh
-node service.mjs
-```
+## Local development
 
-Run it with a different group name to test out the event display:
+* npm install
+* npm start
 
-```sh
-GROUP=awesomeboston node service.mjs
-```
+## Deployment
 
-Open the webpage locally:
-
-```sh
-open docs/index.html
-```
+This is a static no-build site hosted on github pages. To deploy it, push to the main branch.

@@ -20,8 +20,8 @@
         <p data-role="event-date-info"><time>${new Date(event.start_time_raw).toLocaleDateString(undefined, { year: 'numeric', month: 'long', day: 'numeric' })}</time></p>
         <p><time>${event.start_time}</time> to <time>${event.end_time}</time></p>
         <address data-role="event-venue-info">${event.location}<br></address>
-        <p><a href="${event.html_link}" class="cta--primary">RSVP</a></p>
-        <p>${event.description}</p>
+        <div><a href="${event.html_link}" class="cta--primary">RSVP</a></div>
+        <div class="events__description">${event.description}</div>
         <p><a href="https://www.meetup.com/bostonrb">See all events</a></p>
       `;
     } else {
