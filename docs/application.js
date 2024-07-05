@@ -9,7 +9,7 @@
       message.innerHTML = `<p><a href="https://www.meetup.com/bostonrb">See upcoming events</a></p>`;
       return;
     }
-    const future_events = event_list.filter(e => e.status === "upcoming")
+    const future_events = event_list.filter(e => new Date(e.end_date_raw) > new Date())
       .sort((a, b) => a.start_time_raw - b.start_time_raw);
     const event = future_events[0];
 
