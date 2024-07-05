@@ -18,7 +18,7 @@ body {
 body {
   color: #222;
   display: grid;
-  font-family: "WorkSans", system-ui, -apple-system, BlinkMacSystemFont, "Avenir Next", "Avenir", "Segoe UI", "Lucida Grande", "Helvetica Neue", "Helvetica", "Fira Sans", "Roboto", "Noto", "Droid Sans", "Cantarell", "Oxygen", "Ubuntu", "Franklin Gothic Medium", "Century Gothic", "Liberation Sans", sans-serif;
+  font-family: "WorkSans", system-ui, -apple-system, BlinkMacSystemFont, "Avenir Next", "Avenir", "Segoe UI", "Lucida Grande", "Helvetica Neue", "Helvetica", "Fira Sans", "Noto", "Droid Sans", "Cantarell", "Oxygen", "Ubuntu", "Franklin Gothic Medium", "Century Gothic", "Liberation Sans", sans-serif;
   font-size: 1rem;
   grid-gap: 1rem;
   grid-template-areas: "header" "main" "footer";
@@ -37,14 +37,6 @@ body {
 @font-face {
   font-family: "WorkSans";
   src: url(fonts/WorkSans-Bold.woff2) format("woff2"), url(fonts/WorkSans-Bold.woff) format("woff");
-  font-display: swap;
-  font-style: normal;
-  font-weight: 700
-}
-
-@font-face {
-  font-family: "RobotoMono";
-  src: url(fonts/RobotoMono-Bold.woff2) format("woff2"), url(fonts/RobotoMono-Bold.woff) format("woff");
   font-display: swap;
   font-style: normal;
   font-weight: 700
@@ -123,10 +115,8 @@ picture {
 
 h2,
 .topic-overline {
-  font-family: "RobotoMono", "Consolas", "monaco", monospace;
-  font-size: 0.75rem;
+  font-size: 1rem;
   font-weight: 700;
-  letter-spacing: 0.25rem;
   margin-top: 0;
   text-transform: uppercase
 }
@@ -199,10 +189,6 @@ time {
 
 address {
   font-style: normal
-}
-
-small {
-  font-family: "RobotoMono", "Consolas", "monaco", monospace
 }
 
 .skip-to-main {
