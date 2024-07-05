@@ -14,6 +14,11 @@
     const event = future_events[0];
 
     if (event) {
+
+      // api returns an unholy mess of html-formatted markdown. try our best to clean it up
+      const desc = event.description.replace(/<br\/?>/g, "\n\n").replace(/<\/?p>/g, "\n").replace(/<a href=".*?">(.*?)<\/a>/g, "$1");
+
+      console.log(desc);
       container.innerHTML = `
         <h2>Our next event</h2>
         <p class="events__item-title" data-role="event-name">${event.name}</p>
@@ -21,7 +26,7 @@
         <p><time>${event.start_time}</time> to <time>${event.end_time}</time></p>
         <address data-role="event-venue-info">${event.location}<br></address>
         <div><a href="${event.html_link}" class="cta--primary">RSVP</a></div>
-        <div class="events__description">${event.description}</div>
+        <div class="events__description">${marked.parse(desc)}</div>
         <p><a href="https://www.meetup.com/bostonrb">See all events</a></p>
       `;
     } else {
