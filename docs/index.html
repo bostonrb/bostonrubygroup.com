@@ -32,13 +32,20 @@
     <link rel="stylesheet" media="all" href="application.css">
   </head>
   <body>
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-3162ZSG0RY"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-3162ZSG0RY');
+    </script>
     <a class="skip-to-main" href="#main-content">Skip to Main Content</a>
     <header class="hero">
       <picture class="hero__media">
         <source media="(min-width: 80em)" srcset="images/hero_1200.jpg">
         <source media="(min-width: 50em)" srcset="images/hero_900.jpg">
         <source media="(min-width: 1px)" srcset="images/hero_650.jpg">
-        <img src="images/hero_650.jpg" alt="A group of people attending a Boston Ruby meetup.">
+        <img src="images/hero_650.jpg" alt="A group of people attending a Boston Ruby meeting.">
       </picture>
       <div class="hero__content">
         <p class="hero__overline topic-overline">Boston Ruby Group</p>
@@ -49,15 +56,24 @@
       <section class="about">
         <p class="about__content">
           The Boston Ruby Group is a community of Ruby language enthusiasts. We hold
-          monthly meetups on the second Tuesday of the month with two long-form talks.
+          monthly meetings on the second Tuesday of the month with two long-form talks.
           We also have a project night on the first Monday of the month.
         </p>
       </section>
       <section class="events">
         <ul class="events__list">
           <li class="events__item" data-role="upcoming-event">
-            <h2>Our next event</h2>
-            <p>Loading...</p>
+            <h2>Upcoming Events</h2>
+            <iframe
+              src="https://lu.ma/embed/calendar/cal-O0xLKEqq4Q8vc8f/events?"
+              width="100%"
+              height="450"
+              frameborder="0"
+              style="border: 1px solid #757c8588; border-radius: 4px;"
+              allowfullscreen=""
+              aria-hidden="false"
+              tabindex="0"
+            ></iframe>
           </li>
           <li class="events__item">
             <h2>Project Nights</h2>
@@ -80,10 +96,10 @@
         <h2>Join our community</h2>
         <ul class="nav__list">
           <li class="nav__item">
-            <a href="https://www.meetup.com/bostonrb/">Meetup</a>
+            <a href="https://lu.ma/bostonrb">Subscribe to events</a>
           </li>
           <li class="nav__item">
-            <a href="https://join.slack.com/t/bostonrb/shared_invite/zt-26831so1i-rTRvwdAycSWZNPPrFoDdtA">Slack</a>
+            <a href="https://join.slack.com/t/bostonrb/shared_invite/zt-26831so1i-rTRvwdAycSWZNPPrFoDdtA">Join Slack</a>
           </li>
           <!--li class="nav__item">
             <a href="https://twitter.com/bostonrb/">Twitter</a>
@@ -94,14 +110,13 @@
             <a href="https://papercall.io/bostonrb/">Submit a talk</a>
           </li>
           <li class="nav__item">
-            <a href="https://www.meetup.com/bostonrb/messages/boards/forum/29446267/">Job Board</a>
+            <a href="https://bostonrb.slack.com/archives/C0719QK96">Job Board</a>
           </li>
         </ul>
       </nav>
     </main>
     <footer class="footer">
     </footer>
-    <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
     <script src="application.js"></script>
   </body>
 </html>
